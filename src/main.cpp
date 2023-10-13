@@ -54,6 +54,7 @@ int main(int argc, const char** argv)
         break;
       case sf::Event::Resized:
         ui_texture.create(event.size.width, event.size.height);
+        window.setView(ui_texture.getView());
         break;
       case sf::Event::KeyPressed:
         if(event.key.code == sf::Keyboard::Key::Space)
